@@ -1,0 +1,16 @@
+{
+    "contents" : "# This is the user-interface definition of a Shiny web application.\n# With this application one can find the Body Mass Index and the classification.\n#\n\nlibrary(shiny)\n\nshinyUI\n(\n  pageWithSidebar\n  (\n    headerPanel(\"Body Mass Index - Calculator & Classifier\"),\n    sidebarPanel\n    (\n      h4('This application calculates your Body Mass Index and show the result of the classification.'),\n      h4('Please provide the following details.'),\n      sliderInput(\"weight\", 'Weight in Kilograms', 0, min=0, max=200, step=0.25),\n      sliderInput(\"height\", 'Height in Metres', 0, min=0, max=3, step=0.01),\n      submitButton(\"Submit\")\n    ),\n    mainPanel\n    (\n      h4('Your Body Mass Index is '),\n      verbatimTextOutput(\"obmivalue\"),\n      h4('And you are classifed as '),\n      verbatimTextOutput(\"obmiclass\")\n    )\n  )\n)\n",
+    "created" : 1432461658946.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "663134340",
+    "id" : "62B6743E",
+    "lastKnownWriteTime" : 1432461695,
+    "path" : "D:/Learn/Coursera/Developing Data Products/Projects/BMI_App/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

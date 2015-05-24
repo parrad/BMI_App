@@ -1,0 +1,10 @@
+Classification,Min,Max
+,0.00,0.00
+Underweight : Severe thinness,0.01,15.99
+Underweight : Moderate thinness,16.00,16.99
+Underweight : Mild thinness,17.00,18.49
+Normal range,18.50,24.99
+Overweight :  Pre-obese,25.00,29.99
+Obese : Class I,30.00,34.99
+Obese : Class II,35.00,39.99
+Obese : Class III,40.00,100000.00

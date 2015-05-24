@@ -1,0 +1,16 @@
+{
+    "contents" : "# This is the user-interface definition of a Shiny web application.\n# With this application one can find the Body Mass Index and the classification.\n#\n\nlibrary(shiny)\n\nbmi.value <- function(weight, height) \n{\n  if(height > 0)\n    weight / (height * height)\n}\n\nbmi.class <- function(bmi) \n{\n  bmi.df <- read.csv(\"BMI.csv\")\n  bmi.df.filtered <- subset(bmi.df, Min <= bmi & Max > bmi, select = c(Classification))\n  as.character(bmi.df.filtered$Classification)\n}\n\nshinyServer\n(\n  function(input, output)\n  {\n    output$obmivalue <- renderText({bmi.value(input$weight, input$height)})\n    output$obmiclass <- renderText({bmi.class(bmi.value(input$weight, input$height))})\n  }\n)\n",
+    "created" : 1432461659137.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2315845657",
+    "id" : "8A2F5101",
+    "lastKnownWriteTime" : 1432461710,
+    "path" : "D:/Learn/Coursera/Developing Data Products/Projects/BMI_App/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
